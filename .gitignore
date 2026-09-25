@@ -1,0 +1,4 @@
+# n8n workflow exports contain personal data; this repository is public.
+backups/
+*.env
+.env*
