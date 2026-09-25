@@ -27,7 +27,7 @@ for id in $(api "/workflows?limit=250" | jq -r '.data[].id'); do
   echo "== $(jq -r .name <<<"$wf") ($id)"
 
   echo "-- triggers"
-  jq -r '.nodes[] | select(.type | test("[Tt]rigger|webhook|cron|schedule"; "i"))
+  jq -r '.nodes[] | select(.type | test("trigger|webhook|cron|schedule|emailReadImap"; "i"))
          | "  \(.name)  [\(.type)]\(if .disabled then "  DISABLED" else "" end)"' <<<"$wf"
 
   echo "-- credential references"
@@ -35,7 +35,7 @@ for id in $(api "/workflows?limit=250" | jq -r '.data[].id'); do
           | "  \(.key): \(.value.name) (\(.value.id))"] | unique[]' <<<"$wf"
 
   echo "-- approval / wait nodes"
-  jq -r '.nodes[] | select((.type | test("wait"; "i")) or ((.parameters.operation // "") == "sendAndWait"))
+  jq -r '.nodes[] | select((.type | test("wait|hitl"; "i")) or ((.parameters.operation // "") == "sendAndWait"))
          | "  \(.name)  [\(.type)]"' <<<"$wf"
 
   echo "-- last $limit executions"
