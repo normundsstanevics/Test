@@ -15,7 +15,7 @@ only in the n8n data table **People**.
 
 ## Planned steps
 1. ✅ People table created and seeded from the reviewed spreadsheet.
-2. Chief of Staff routes: "Who is …?", "Prep me for my meeting with …",
+2. ✅ Chief of Staff routes: "Who is …?", "Prep me for my meeting with …",
    "Who should I reconnect with?" (read-only, sourced).
 3. Weekly people update: refresh `last_contact` from calendars and mail
    metadata, and send a WhatsApp list of *new* contacts for yes/no approval
