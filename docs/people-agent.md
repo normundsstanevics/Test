@@ -1,4 +1,7 @@
-# People (relationship memory) – design notes
+# Relationship Management module (inside Chief of Staff) – design notes
+
+Lives inside the "AI Chief of Staff" n8n workflow, marked with purple
+"RELATIONSHIP MANAGEMENT" notes and the workflow tag "Relationship Management".
 
 No personal data lives in this repository; the contact list itself is stored
 only in the n8n data table **People**.
