@@ -22,6 +22,9 @@ only in the n8n data table **People**.
 1. ✅ People table created and seeded from the reviewed spreadsheet.
 2. ✅ Chief of Staff routes: "Who is …?", "Prep me for my meeting with …",
    "Who should I reconnect with?" (read-only, sourced).
-3. Weekly people update: refresh `last_contact` from calendars and mail
+3. ✅ Research route: "Research <name>" = public professional background for external
+   contacts only (OpenAI web search; no Facebook/Instagram, no private life).
+   "save profile <name>" stores a summary on the card after WhatsApp approval.
+4. Weekly people update: refresh `last_contact` from calendars and mail
    metadata, and send a WhatsApp list of *new* contacts for yes/no approval
    (see the rule above). Reconnect reminders for starred people.
