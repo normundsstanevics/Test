@@ -9,6 +9,8 @@ only in the n8n data table **People**.
   email (Gmail, iCloud, Amber summaries), calendars or Plaud, the assistant
   must *ask* the owner whether to add them, showing name, where they appeared
   and a suggested role. Only an explicit "yes" adds the contact.
+- Contacts the owner declines are kept as `status = declined` (name only) so
+  they are never suggested again; they are not used for anything else.
 - Family contacts are added only when the owner explicitly asks.
 - Cards hold role and relationship only – no details of sensitive matters
   (legal cases, restructuring, health, politics).
