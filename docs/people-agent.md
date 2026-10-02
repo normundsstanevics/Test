@@ -25,6 +25,13 @@ only in the n8n data table **People**.
 3. ✅ Research route: "Research <name>" = public professional background for external
    contacts only (OpenAI web search; no Facebook/Instagram, no private life).
    "save profile <name>" stores a summary on the card after WhatsApp approval.
-4. Weekly people update: refresh `last_contact` from calendars and mail
+4. ✅ Contact Watch (daily 18:30 Riga, workflow "Relationship Management – Contact Watch"):
+   reads 2 days of Gmail, Google calendar, iCloud mail index and WhatsApp chats with
+   the assistant; updates `last_contact` for known People; asks on WhatsApp before
+   adding anyone new (Approve = add, Decline = don't ask again). Skips automated
+   senders, marketing, students and one-off contacts.
+5. Later: reconnect reminders for starred people; live Amber (Microsoft 365) mail.
+
+(Old plan) Weekly people update: refresh `last_contact` from calendars and mail
    metadata, and send a WhatsApp list of *new* contacts for yes/no approval
    (see the rule above). Reconnect reminders for starred people.
